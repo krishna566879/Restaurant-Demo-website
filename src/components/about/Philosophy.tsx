@@ -25,24 +25,24 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2
+      staggerChildren: 0.08
     }
   }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 16 },
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] }
+    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
   }
 };
 
 export default function Philosophy() {
   return (
-    <section className="py-section bg-noir-900">
-      <div className="max-w-site mx-auto px-6 md:px-12">
+    <section className="py-16 md:py-24 lg:py-section bg-noir-900">
+      <div className="max-w-site mx-auto px-5 sm:px-6 md:px-12">
         <SectionHeading 
           eyebrow="PHILOSOPHY"
           title="What We Believe"
@@ -53,8 +53,8 @@ export default function Philosophy() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16"
+          viewport={{ once: true, margin: '-20px' }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mt-12 md:mt-16"
         >
           {principles.map((principle) => (
             <motion.div key={principle.num} variants={itemVariants} className="flex flex-col">

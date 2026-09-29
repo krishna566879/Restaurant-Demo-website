@@ -4,24 +4,25 @@ import ImageReveal from '../ui/ImageReveal';
 
 export default function ChefStory() {
   return (
-    <section className="py-section bg-noir-950">
-      <div className="max-w-site mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
+    <section className="py-16 md:py-24 lg:py-section bg-noir-950 overflow-hidden">
+      <div className="max-w-site mx-auto px-5 sm:px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 md:gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-2">
-            <div className="aspect-[3/4] w-full">
+            <div className="aspect-[3/4] w-full max-w-lg mx-auto lg:max-w-none">
               <ImageReveal 
                 src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80" 
                 alt="Chef Adrian Vale"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
           
           <div className="lg:col-span-3">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: '-20px' }}
+              transition={{ duration: 0.38 }}
             >
               <p className="font-sans text-eyebrow uppercase tracking-[0.15em] text-sage mb-4">
                 The Chef
@@ -31,16 +32,16 @@ export default function ChefStory() {
                 Chef Adrian Vale
               </h2>
               
-              <p className="text-champagne text-sm uppercase tracking-wider mb-8">
+              <p className="text-champagne text-sm uppercase tracking-wider mb-6 md:mb-8">
                 Executive Chef & Founder
               </p>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true, margin: '-20px' }}
+              transition={{ duration: 0.38, delay: 0.05 }}
               className="text-ivory-dim leading-relaxed space-y-6"
             >
               <p>
@@ -52,11 +53,11 @@ export default function ChefStory() {
             </motion.div>
 
             <motion.blockquote
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -16 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="font-serif italic text-lg text-ivory border-l-2 border-sage pl-6 mt-8 py-2"
+              viewport={{ once: true, margin: '-20px' }}
+              transition={{ duration: 0.38, delay: 0.1 }}
+              className="font-serif italic text-base sm:text-lg text-ivory border-l-2 border-sage pl-5 sm:pl-6 mt-8 py-2"
             >
               "I believe the finest dishes are born from patience, the best ingredients, and a willingness to let simplicity speak."
             </motion.blockquote>

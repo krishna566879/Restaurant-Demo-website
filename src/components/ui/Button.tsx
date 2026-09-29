@@ -10,7 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default function Button({ children, variant = 'primary', size = 'md', href, className = '', ...props }: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-sans font-medium tracking-wide uppercase transition-all duration-400 cursor-pointer';
+  const baseStyles = 'inline-flex items-center justify-center text-center font-sans font-medium tracking-wide uppercase transition-all duration-200 cursor-pointer whitespace-nowrap';
 
   const variants = {
     primary: 'bg-sage text-noir-950 hover:bg-sage-dark',

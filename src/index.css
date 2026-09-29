@@ -11,10 +11,12 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-noir-950 text-ivory font-sans antialiased;
+    overflow-x: hidden;
   }
 
   ::selection {
@@ -42,5 +44,14 @@
 @layer components {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

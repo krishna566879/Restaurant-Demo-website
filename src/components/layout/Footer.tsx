@@ -7,11 +7,11 @@ import { navigationLinks } from '../../data/navigation';
 
 export default function Footer() {
   return (
-    <footer className="bg-noir-950 pt-section pb-8 border-t border-noir-700">
+    <footer className="bg-noir-950 pt-16 md:pt-24 lg:pt-section pb-8 border-t border-noir-700">
       <Container>
-        <div className="mb-16 flex flex-col md:flex-row justify-between items-start gap-8">
+        <div className="mb-12 md:mb-16 flex flex-col lg:flex-row justify-between items-start gap-10 lg:gap-12">
           <div className="max-w-md">
-            <Link to="/" className="font-serif text-3xl tracking-[0.2em] uppercase text-ivory block mb-4">
+            <Link to="/" className="font-serif text-2xl sm:text-3xl tracking-[0.2em] uppercase text-ivory block mb-4">
               NOIR & SAGE
             </Link>
             <p className="text-ivory-dim font-sans text-base leading-relaxed">
@@ -19,10 +19,10 @@ export default function Footer() {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 md:gap-12 w-full lg:w-auto">
             <div>
-              <h3 className="font-sans text-eyebrow uppercase tracking-[0.15em] text-ivory mb-6">Navigation</h3>
-              <ul className="space-y-4">
+              <h3 className="font-sans text-eyebrow uppercase tracking-[0.15em] text-ivory mb-4 sm:mb-6">Navigation</h3>
+              <ul className="space-y-3 sm:space-y-4">
                 {navigationLinks.map((item) => (
                   <li key={item.label}>
                     <Link to={item.path} className="text-ivory-dim hover:text-sage transition-colors font-sans text-sm">
@@ -34,17 +34,17 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-sans text-eyebrow uppercase tracking-[0.15em] text-ivory mb-6">Contact</h3>
-              <ul className="space-y-4 text-ivory-dim font-sans text-sm">
+              <h3 className="font-sans text-eyebrow uppercase tracking-[0.15em] text-ivory mb-4 sm:mb-6">Contact</h3>
+              <ul className="space-y-3 sm:space-y-4 text-ivory-dim font-sans text-sm break-words">
                 <li>{restaurantData.address}</li>
                 <li>{restaurantData.phone}</li>
-                <li>{restaurantData.email}</li>
+                <li className="break-all sm:break-normal">{restaurantData.email}</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="font-sans text-eyebrow uppercase tracking-[0.15em] text-ivory mb-6">Hours</h3>
-              <ul className="space-y-4 text-ivory-dim font-sans text-sm">
+              <h3 className="font-sans text-eyebrow uppercase tracking-[0.15em] text-ivory mb-4 sm:mb-6">Hours</h3>
+              <ul className="space-y-3 sm:space-y-4 text-ivory-dim font-sans text-sm">
                 {restaurantData.hours.map((h, i) => (
                   <li key={i}>
                     <span className="block text-ivory">{h.days}</span>

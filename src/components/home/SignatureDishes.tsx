@@ -7,7 +7,7 @@ import { signatureDishes } from '../../data/menu';
 
 export default function SignatureDishes() {
   return (
-    <section className="py-section bg-noir-900 text-ivory">
+    <section className="py-16 md:py-24 lg:py-section bg-noir-900 text-ivory">
       <Container>
         <SectionHeading 
           eyebrow="THE KITCHEN"
@@ -15,21 +15,24 @@ export default function SignatureDishes() {
           subtitle="A curated selection from our seasonal menu."
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 mt-12 md:mt-16">
           {signatureDishes.map((dish, index) => (
             <motion.div
               key={dish.name}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ duration: 0.4, delay: index * 0.06, ease: "easeOut" }}
               className="group flex flex-col"
             >
-              <div className="relative aspect-[3/4] overflow-hidden mb-6 rounded-sm">
+              <div className="relative aspect-[3/4] overflow-hidden mb-5 sm:mb-6 rounded-sm bg-noir-800">
                 <img 
                   src={dish.image} 
                   alt={dish.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="mb-2">

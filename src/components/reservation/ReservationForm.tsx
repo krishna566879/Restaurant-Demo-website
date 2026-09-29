@@ -20,22 +20,23 @@ export default function ReservationForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="min-w-0">
           <label className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Date</label>
           <input
             type="date"
             required
-            className="w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
+            className="w-full min-w-0 bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
           />
         </div>
-        <div>
+        <div className="min-w-0">
           <label className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Time</label>
           <select
             required
-            className="w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
+            defaultValue=""
+            className="w-full min-w-0 bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
           >
-            <option value="" disabled selected>Select time</option>
+            <option value="" disabled>Select time</option>
             <option value="18:00">6:00 PM</option>
             <option value="18:30">6:30 PM</option>
             <option value="19:00">7:00 PM</option>
@@ -47,13 +48,14 @@ export default function ReservationForm() {
             <option value="22:00">10:00 PM</option>
           </select>
         </div>
-        <div>
+        <div className="min-w-0">
           <label className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Guests</label>
           <select
             required
-            className="w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
+            defaultValue=""
+            className="w-full min-w-0 bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
           >
-            <option value="" disabled selected>Select guests</option>
+            <option value="" disabled>Select guests</option>
             {[1, 2, 3, 4, 5, 6, 7, '8+'].map(num => (
               <option key={num} value={num}>{num} {num === 1 ? 'Guest' : 'Guests'}</option>
             ))}
@@ -61,44 +63,44 @@ export default function ReservationForm() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="min-w-0">
           <label className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">First Name</label>
           <input
             type="text"
             required
             placeholder="Jane"
-            className="w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
+            className="w-full min-w-0 bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
           />
         </div>
-        <div>
+        <div className="min-w-0">
           <label className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Last Name</label>
           <input
             type="text"
             required
             placeholder="Doe"
-            className="w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
+            className="w-full min-w-0 bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
           />
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="min-w-0">
           <label className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Email</label>
           <input
             type="email"
             required
             placeholder="jane@example.com"
-            className="w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
+            className="w-full min-w-0 bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
           />
         </div>
-        <div>
+        <div className="min-w-0">
           <label className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Phone</label>
           <input
             type="tel"
             required
             placeholder="(555) 000-0000"
-            className="w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
+            className="w-full min-w-0 bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
           />
         </div>
       </div>

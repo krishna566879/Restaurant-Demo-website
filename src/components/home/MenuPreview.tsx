@@ -13,34 +13,34 @@ export default function MenuPreview() {
   }));
 
   return (
-    <section className="py-section bg-noir-950 text-ivory">
+    <section className="py-16 md:py-24 lg:py-section bg-noir-950 text-ivory">
       <Container>
         <SectionHeading 
           eyebrow="A TASTE"
           title="From the Menu"
         />
         
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-20 gap-y-16 mt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 xl:gap-x-20 gap-y-12 md:gap-y-16 mt-12 md:mt-16">
           {previewCategories.map((category, catIdx) => (
             <motion.div 
               key={category.slug}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: catIdx * 0.1 }}
+              viewport={{ once: true, margin: "-20px" }}
+              transition={{ duration: 0.38, delay: catIdx * 0.05 }}
             >
-              <h3 className="font-serif text-heading-3 text-sage mb-8 border-b border-noir-700 pb-4">
+              <h3 className="font-serif text-heading-3 text-sage mb-6 md:mb-8 border-b border-noir-700 pb-4">
                 {category.name}
               </h3>
-              <ul className="space-y-8">
+              <ul className="space-y-6 md:space-y-8">
                 {category.items.map((item) => (
                   <li key={item.name} className="flex flex-col">
-                    <div className="flex items-baseline mb-2">
-                      <span className="font-serif text-lg text-ivory whitespace-nowrap">{item.name}</span>
-                      <div className="mx-4 flex-grow border-b border-dotted border-noir-700 relative top-[-6px]" />
-                      <span className="font-sans text-champagne">{item.price}</span>
+                    <div className="flex items-baseline justify-between gap-2 mb-1.5">
+                      <span className="font-serif text-base sm:text-lg text-ivory min-w-0">{item.name}</span>
+                      <div className="hidden sm:block mx-3 flex-grow border-b border-dotted border-noir-700 relative top-[-6px] min-w-[1.5rem]" />
+                      <span className="font-sans text-champagne shrink-0 text-sm sm:text-base">{item.price}</span>
                     </div>
-                    <p className="text-sm text-ivory-dim pr-12">{item.description}</p>
+                    <p className="text-sm text-ivory-dim sm:pr-12">{item.description}</p>
                   </li>
                 ))}
               </ul>
@@ -48,8 +48,8 @@ export default function MenuPreview() {
           ))}
         </div>
         
-        <div className="mt-20 flex justify-center">
-          <Button href="/menu" variant="secondary">
+        <div className="mt-14 md:mt-20 flex justify-center">
+          <Button href="/menu" variant="secondary" className="w-full sm:w-auto">
             View Full Menu
           </Button>
         </div>

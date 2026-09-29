@@ -16,17 +16,17 @@ export const MenuItemCard: React.FC<MenuItemCardProps> = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 14 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      viewport={{ once: true, margin: '-15px' }}
+      transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       className="border-b border-noir-700/50 pb-6 mb-6 last:border-b-0 last:mb-0 last:pb-0"
     >
       <div className="flex justify-between items-baseline gap-4">
-        <div className="flex items-center gap-3 flex-wrap">
-          <h4 className="font-serif text-lg text-ivory">{name}</h4>
+        <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap min-w-0">
+          <h4 className="font-serif text-base sm:text-lg text-ivory">{name}</h4>
           {dietary && dietary.length > 0 && (
-            <div className="flex gap-2">
+            <div className="flex gap-1.5 sm:gap-2">
               {dietary.map((tag) => (
                 <span
                   key={tag}
@@ -38,11 +38,11 @@ export const MenuItemCard: React.FC<MenuItemCardProps> = ({
             </div>
           )}
         </div>
-        <div className="text-champagne font-sans text-sm tracking-wide whitespace-nowrap">
+        <div className="text-champagne font-sans text-sm tracking-wide whitespace-nowrap shrink-0">
           {price}
         </div>
       </div>
-      <p className="text-sm text-ivory-dim mt-1 max-w-[85%]">{description}</p>
+      <p className="text-sm text-ivory-dim mt-1 sm:max-w-[85%]">{description}</p>
     </motion.div>
   );
 };

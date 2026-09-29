@@ -25,7 +25,7 @@ export default function ContactInfo() {
         </div>
         <div className="flex flex-row gap-3 items-center">
           <Mail className="text-sage w-5 h-5 shrink-0" />
-          <span className="text-ivory-dim">{restaurantData.email}</span>
+          <span className="text-ivory-dim break-all sm:break-normal">{restaurantData.email}</span>
         </div>
       </div>
 
@@ -33,7 +33,7 @@ export default function ContactInfo() {
         <h3 className="font-serif text-lg mb-4 text-ivory">Opening Hours</h3>
         <ul className="space-y-3">
           {restaurantData.hours.map((schedule, idx) => (
-            <li key={idx} className="flex justify-between items-center border-b border-noir-700/50 pb-2">
+            <li key={idx} className="flex flex-wrap justify-between items-center gap-2 border-b border-noir-700/50 pb-2 text-sm sm:text-base">
               <span className="text-ivory">{schedule.days}</span>
               <span className="text-ivory-dim">{schedule.time}</span>
             </li>

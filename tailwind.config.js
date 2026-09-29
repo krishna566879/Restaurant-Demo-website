@@ -32,9 +32,9 @@ export default {
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'display': ['clamp(3rem, 6vw, 5.5rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
-        'heading-1': ['clamp(2.25rem, 4vw, 3.5rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
-        'heading-2': ['clamp(1.75rem, 3vw, 2.5rem)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
+        'display': ['clamp(2.35rem, 6vw, 5.5rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
+        'heading-1': ['clamp(1.9rem, 4vw, 3.5rem)', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
+        'heading-2': ['clamp(1.6rem, 3vw, 2.5rem)', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
         'heading-3': ['clamp(1.25rem, 2vw, 1.75rem)', { lineHeight: '1.2' }],
         'eyebrow': ['0.75rem', { lineHeight: '1', letterSpacing: '0.15em', fontWeight: '500' }],
       },
