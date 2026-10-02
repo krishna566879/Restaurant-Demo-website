@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import SectionHeading from '../ui/SectionHeading';
+import { DEFAULT_VIEWPORT, staggerContainer, cardRevealItem } from '../../utils/motion';
 
 const principles = [
   {
@@ -20,25 +21,6 @@ const principles = [
   }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] }
-  }
-};
-
 export default function Philosophy() {
   return (
     <section className="py-16 md:py-24 lg:py-section bg-noir-900">
@@ -50,19 +32,27 @@ export default function Philosophy() {
         />
         
         <motion.div 
-          variants={containerVariants}
+          variants={staggerContainer(0.08, 0.04)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-20px' }}
+          viewport={DEFAULT_VIEWPORT}
           className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mt-12 md:mt-16"
         >
           {principles.map((principle) => (
-            <motion.div key={principle.num} variants={itemVariants} className="flex flex-col">
+            <motion.div
+              key={principle.num}
+              variants={cardRevealItem}
+              className="group flex flex-col transition-transform duration-240 ease-luxury hover:-translate-y-1"
+            >
               <div className="mb-6 flex items-center gap-4">
-                <span className="font-serif text-sage text-xl">{principle.num}</span>
-                <div className="h-px bg-sage/30 flex-grow" />
+                <span className="font-serif text-sage group-hover:text-champagne transition-colors duration-180 ease-luxury text-xl">
+                  {principle.num}
+                </span>
+                <div className="h-px bg-sage/30 group-hover:bg-sage/70 transition-colors duration-240 ease-luxury flex-grow" />
               </div>
-              <h3 className="font-serif text-heading-3 text-ivory mb-4">{principle.title}</h3>
+              <h3 className="font-serif text-heading-3 text-ivory group-hover:text-champagne transition-colors duration-180 ease-luxury mb-4">
+                {principle.title}
+              </h3>
               <p className="text-ivory-dim leading-relaxed">{principle.description}</p>
             </motion.div>
           ))}

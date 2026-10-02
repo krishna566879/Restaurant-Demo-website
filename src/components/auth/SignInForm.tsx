@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../ui/Button';
 
+const inputClasses =
+  'w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 transition-[border-color,background-color,box-shadow] duration-180 ease-luxury hover:border-noir-600 focus:border-sage focus:bg-noir-800/90 focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted';
+
 export default function SignInForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -10,31 +13,37 @@ export default function SignInForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Email</label>
+        <label htmlFor="signin-email" className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Email</label>
         <input
+          id="signin-email"
+          name="email"
           type="email"
+          autoComplete="email"
           required
           placeholder="your@email.com"
-          className="w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
+          className={inputClasses}
         />
       </div>
 
       <div>
-        <label className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Password</label>
+        <label htmlFor="signin-password" className="text-xs font-sans uppercase tracking-[0.15em] text-ivory-dim mb-2 block">Password</label>
         <input
+          id="signin-password"
+          name="password"
           type="password"
+          autoComplete="current-password"
           required
           placeholder="••••••••"
-          className="w-full bg-noir-800 border border-noir-700 text-ivory px-4 py-3 focus:border-sage focus:outline-none focus:ring-1 focus:ring-sage/30 placeholder:text-ivory-muted"
+          className={inputClasses}
         />
       </div>
 
       <div className="flex items-center justify-between">
-        <label className="flex items-center gap-2 cursor-pointer">
-          <input type="checkbox" className="w-4 h-4 rounded border-noir-700 bg-noir-800 text-sage focus:ring-sage focus:ring-offset-noir-950" />
-          <span className="text-sm text-ivory-dim">Remember me</span>
+        <label className="group flex items-center gap-2 cursor-pointer">
+          <input type="checkbox" className="w-4 h-4 rounded border-noir-700 bg-noir-800 text-sage focus:ring-sage focus:ring-offset-noir-950 transition-colors duration-180" />
+          <span className="text-sm text-ivory-dim group-hover:text-ivory transition-colors duration-180 ease-luxury">Remember me</span>
         </label>
-        <a href="#" className="text-sm text-sage hover:text-ivory transition-colors">Forgot password?</a>
+        <a href="#forgot-password" onClick={(e) => e.preventDefault()} className="text-sm text-sage hover:text-champagne transition-colors duration-180 ease-luxury">Forgot password?</a>
       </div>
 
       <Button type="submit" className="w-full">
@@ -48,17 +57,17 @@ export default function SignInForm() {
       </div>
 
       <div className="space-y-4">
-        <Button variant="secondary" className="w-full justify-center">
+        <Button type="button" variant="secondary" className="w-full justify-center">
           Continue with Google
         </Button>
-        <Button variant="secondary" className="w-full justify-center">
+        <Button type="button" variant="secondary" className="w-full justify-center">
           Continue with Apple
         </Button>
       </div>
 
       <p className="text-center text-sm text-ivory-dim mt-8">
         Don't have an account?{' '}
-        <Link to="/signup" className="text-sage hover:text-ivory transition-colors">
+        <Link to="/signup" className="text-sage hover:text-champagne transition-colors duration-180 ease-luxury">
           Sign Up
         </Link>
       </p>

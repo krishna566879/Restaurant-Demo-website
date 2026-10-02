@@ -11,7 +11,7 @@ export default function Footer() {
       <Container>
         <div className="mb-12 md:mb-16 flex flex-col lg:flex-row justify-between items-start gap-10 lg:gap-12">
           <div className="max-w-md">
-            <Link to="/" className="font-serif text-2xl sm:text-3xl tracking-[0.2em] uppercase text-ivory block mb-4">
+            <Link to="/" className="font-serif text-2xl sm:text-3xl tracking-[0.2em] uppercase text-ivory hover:text-champagne transition-colors duration-180 ease-luxury inline-block mb-4">
               NOIR & SAGE
             </Link>
             <p className="text-ivory-dim font-sans text-base leading-relaxed">
@@ -25,7 +25,7 @@ export default function Footer() {
               <ul className="space-y-3 sm:space-y-4">
                 {navigationLinks.map((item) => (
                   <li key={item.label}>
-                    <Link to={item.path} className="text-ivory-dim hover:text-sage transition-colors font-sans text-sm">
+                    <Link to={item.path} className="inline-block text-ivory-dim hover:text-sage hover:translate-x-1 transition-[color,transform] duration-180 ease-luxury font-sans text-sm">
                       {item.label}
                     </Link>
                   </li>

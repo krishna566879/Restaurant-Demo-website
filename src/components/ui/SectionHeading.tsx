@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { LUXURY_EASE, DEFAULT_VIEWPORT, staggerContainer, fadeUpSubtle, fadeUpItem } from '../../utils/motion';
 
 interface SectionHeadingProps {
   eyebrow?: string;
@@ -13,24 +14,32 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'cent
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-20px' }}
-      transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+      variants={staggerContainer(0.06)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={DEFAULT_VIEWPORT}
       className={`${alignClasses} ${className}`}
     >
       {eyebrow && (
-        <span className="block text-eyebrow text-sage mb-4 font-sans">
+        <motion.span variants={fadeUpSubtle} className="block text-eyebrow text-sage mb-4 font-sans">
           {eyebrow}
-        </span>
+        </motion.span>
       )}
-      <h2 className="font-serif text-heading-2 text-ivory">
+      <motion.h2
+        variants={fadeUpItem}
+        transition={{ duration: 0.44, ease: LUXURY_EASE }}
+        className="font-serif text-heading-2 text-ivory"
+      >
         {title}
-      </h2>
+      </motion.h2>
       {subtitle && (
-        <p className="mt-4 text-ivory-dim font-sans text-base max-w-xl leading-relaxed" style={align === 'center' ? { margin: '1rem auto 0' } : undefined}>
+        <motion.p
+          variants={fadeUpSubtle}
+          className="mt-4 text-ivory-dim font-sans text-base max-w-xl leading-relaxed"
+          style={align === 'center' ? { margin: '1rem auto 0' } : undefined}
+        >
           {subtitle}
-        </p>
+        </motion.p>
       )}
     </motion.div>
   );

@@ -16,7 +16,10 @@ export default function SocialLinks({ className = '' }: { className?: string }) 
           <a
             key={s.name}
             href={s.url}
-            className="text-ivory-dim hover:text-sage transition-colors duration-400"
+            onClick={(e) => {
+              if (s.url === '#') e.preventDefault();
+            }}
+            className="text-ivory-dim hover:text-sage hover:-translate-y-0.5 hover:scale-110 active:scale-95 transition-[color,transform] duration-180 ease-luxury"
             aria-label={s.name}
           >
             {Icon && <Icon size={18} strokeWidth={1.5} />}

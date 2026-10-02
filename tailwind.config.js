@@ -55,9 +55,15 @@ export default {
         DEFAULT: '#2A2A2A',
       },
       transitionDuration: {
+        '180': '180ms',
+        '240': '240ms',
+        '260': '260ms',
         '400': '400ms',
         '600': '600ms',
         '800': '800ms',
+      },
+      transitionTimingFunction: {
+        'luxury': 'cubic-bezier(0.22, 1, 0.36, 1)',
       },
     },
   },

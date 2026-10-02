@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ImageReveal from '../ui/ImageReveal';
+import { DEFAULT_VIEWPORT, staggerContainer, fadeUpItem, fadeUpSubtle } from '../../utils/motion';
 
 export default function ChefStory() {
   return (
@@ -17,13 +18,14 @@ export default function ChefStory() {
             </div>
           </div>
           
-          <div className="lg:col-span-3">
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-20px' }}
-              transition={{ duration: 0.38 }}
-            >
+          <motion.div
+            variants={staggerContainer(0.07, 0.04)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={DEFAULT_VIEWPORT}
+            className="lg:col-span-3"
+          >
+            <motion.div variants={fadeUpSubtle}>
               <p className="font-sans text-eyebrow uppercase tracking-[0.15em] text-sage mb-4">
                 The Chef
               </p>
@@ -38,10 +40,7 @@ export default function ChefStory() {
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-20px' }}
-              transition={{ duration: 0.38, delay: 0.05 }}
+              variants={fadeUpItem}
               className="text-ivory-dim leading-relaxed space-y-6"
             >
               <p>
@@ -53,15 +52,12 @@ export default function ChefStory() {
             </motion.div>
 
             <motion.blockquote
-              initial={{ opacity: 0, x: -16 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '-20px' }}
-              transition={{ duration: 0.38, delay: 0.1 }}
+              variants={fadeUpItem}
               className="font-serif italic text-base sm:text-lg text-ivory border-l-2 border-sage pl-5 sm:pl-6 mt-8 py-2"
             >
               "I believe the finest dishes are born from patience, the best ingredients, and a willingness to let simplicity speak."
             </motion.blockquote>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

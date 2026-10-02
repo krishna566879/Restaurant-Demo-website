@@ -23,6 +23,11 @@
     @apply bg-sage/30 text-ivory;
   }
 
+  :focus-visible {
+    outline: 1px solid #8A9A7B;
+    outline-offset: 3px;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;

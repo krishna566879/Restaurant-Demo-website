@@ -3,11 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NOIR & SAGE — Contemporary Fine Dining</title>
-    <meta name="description" content="An intimate dining experience, thoughtfully composed. Modern European cuisine in Indore, India." />
+    <title>NOIR & SAGE — Contemporary Fine Dining in Indore</title>
+    <meta
+      name="description"
+      content="NOIR & SAGE is a contemporary dining house in Indore where seasonal ingredients, quiet luxury, and inventive European techniques come together."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <link rel="canonical" href="https://noirandsage.demo/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NOIR & SAGE" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:title" content="NOIR & SAGE — Contemporary Fine Dining in Indore" />
+    <meta
+      property="og:description"
+      content="NOIR & SAGE is a contemporary dining house in Indore where seasonal ingredients, quiet luxury, and inventive European techniques come together."
+    />
+    <meta property="og:url" content="https://noirandsage.demo/" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NOIR & SAGE — Contemporary Fine Dining in Indore" />
+    <meta
+      name="twitter:description"
+      content="NOIR & SAGE is a contemporary dining house in Indore where seasonal ingredients, quiet luxury, and inventive European techniques come together."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80"
+    />
+
+    <!-- Resource Hints & LCP Preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80"
+      imagesrcset="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=640&q=80 640w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80 1200w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80 1920w"
+      imagesizes="100vw"
+    />
+
+    <!-- Non-blocking Font Loading -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Restaurant Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "NOIR & SAGE",
+        "description": "NOIR & SAGE is a contemporary dining house where seasonal ingredients, quiet luxury, and inventive European techniques come together.",
+        "slogan": "An intimate dining experience, thoughtfully composed.",
+        "servesCuisine": "Modern European / Contemporary Fine Dining",
+        "foundingDate": "2019",
+        "founder": {
+          "@type": "Person",
+          "name": "Chef Adrian Vale",
+          "jobTitle": "Executive Chef & Founder"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "42 Willow Street",
+          "addressLocality": "Indore",
+          "addressCountry": "IN"
+        },
+        "telephone": "+91 90000 12345",
+        "email": "hello@noirandsage.demo",
+        "acceptsReservations": true,
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+            "opens": "18:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Friday", "Saturday", "Sunday"],
+            "opens": "18:00",
+            "closes": "23:59"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
