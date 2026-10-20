@@ -37,8 +37,16 @@ export default function Footer() {
               <h3 className="font-sans text-eyebrow uppercase tracking-[0.15em] text-ivory mb-4 sm:mb-6">Contact</h3>
               <ul className="space-y-3 sm:space-y-4 text-ivory-dim font-sans text-sm break-words">
                 <li>{restaurantData.address}</li>
-                <li>{restaurantData.phone}</li>
-                <li className="break-all sm:break-normal">{restaurantData.email}</li>
+                <li>
+                  <a href={`tel:${restaurantData.phone}`} className="hover:text-sage transition-colors duration-180 ease-luxury">
+                    {restaurantData.phone}
+                  </a>
+                </li>
+                <li className="break-all sm:break-normal">
+                  <a href={`mailto:${restaurantData.email}`} className="hover:text-sage transition-colors duration-180 ease-luxury">
+                    {restaurantData.email}
+                  </a>
+                </li>
               </ul>
             </div>
 

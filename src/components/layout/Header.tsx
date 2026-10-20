@@ -64,16 +64,8 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-6 shrink-0">
-            <Link
-              to="/signin"
-              onMouseEnter={() => prefetchRoute('/signin')}
-              onFocus={() => prefetchRoute('/signin')}
-              className="relative py-1 text-sm font-sans tracking-widest uppercase text-ivory hover:text-champagne hover:-translate-y-[1px] transition-[color,transform] duration-180 ease-luxury whitespace-nowrap after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-px after:bg-champagne/80 after:origin-left after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200 after:ease-luxury"
-            >
-              Sign In
-            </Link>
-            <Button variant="primary" size="sm" href="/reservations">
-              Reserve a Table
+            <Button variant="primary" size="sm" href="/contact">
+              Contact Us
             </Button>
           </div>
 

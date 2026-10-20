@@ -1,8 +1,9 @@
-import { Instagram, Facebook, Twitter } from 'lucide-react';
+import { Instagram, Facebook, Twitter, MessageCircle } from 'lucide-react';
 import { restaurantData } from '../../data/restaurant';
 
 const iconMap: Record<string, React.ElementType> = {
   Instagram,
+  WhatsApp: MessageCircle,
   Facebook,
   Twitter,
 };

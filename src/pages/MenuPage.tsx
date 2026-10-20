@@ -135,11 +135,11 @@ export default function MenuPage() {
           className="py-16 md:py-24 border-t border-noir-800 text-center px-5 sm:px-6"
         >
           <motion.h2 variants={fadeUpItem} className="font-serif text-heading-3 text-ivory mb-8">
-            Reserve your table to experience the full menu.
+            Have questions about our seasonal creations or private dining?
           </motion.h2>
           <motion.div variants={fadeUpItem}>
-            <Button href="/reservations" variant="primary" className="w-full sm:w-auto">
-              Make a Reservation
+            <Button href="/contact" variant="primary" className="w-full sm:w-auto">
+              Contact Us
             </Button>
           </motion.div>
         </motion.section>

@@ -7,9 +7,7 @@ import { prefetchAllRoutes } from './utils/routePrefetch';
 
 const MenuPage = lazy(() => import('./pages/MenuPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
-const ReservationPage = lazy(() => import('./pages/ReservationPage'));
-const SignInPage = lazy(() => import('./pages/SignInPage'));
-const SignUpPage = lazy(() => import('./pages/SignUpPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -21,7 +19,6 @@ function ScrollToTop() {
 
 export default function App() {
   const location = useLocation();
-  const isAuthPage = ['/signin', '/signup'].includes(location.pathname);
 
   useEffect(() => {
     if ('requestIdleCallback' in window) {
@@ -39,20 +36,20 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-noir-950 overflow-x-clip">
       <ScrollToTop />
-      {!isAuthPage && <Header />}
+      <Header />
       <main id="main-content" className="flex-grow">
         <Suspense fallback={<div className="min-h-screen bg-noir-950" aria-busy="true" />}>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<HomePage />} />
             <Route path="/menu" element={<MenuPage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/reservations" element={<ReservationPage />} />
-            <Route path="/signin" element={<SignInPage />} />
-            <Route path="/signup" element={<SignUpPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/reservations" element={<ContactPage />} />
+            <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>
       </main>
-      {!isAuthPage && <Footer />}
+      <Footer />
     </div>
   );
 }

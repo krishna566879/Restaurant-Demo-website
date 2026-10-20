@@ -65,6 +65,9 @@ export default {
       transitionTimingFunction: {
         'luxury': 'cubic-bezier(0.22, 1, 0.36, 1)',
       },
+      animation: {
+        'spin-slow': 'spin 12s linear infinite',
+      },
     },
   },
   plugins: [],

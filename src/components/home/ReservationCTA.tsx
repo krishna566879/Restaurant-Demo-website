@@ -30,18 +30,18 @@ export default function ReservationCTA() {
         className="relative z-10 text-center px-5 sm:px-6 max-w-2xl mx-auto flex flex-col items-center w-full"
       >
         <motion.span variants={fadeUpSubtle} className="font-sans text-eyebrow uppercase tracking-[0.15em] text-sage mb-4 sm:mb-6 block">
-          JOIN US
+          GET IN TOUCH
         </motion.span>
         <motion.h2 variants={fadeUpItem} className="font-serif text-heading-1 text-ivory mb-6 italic">
-          Your table is waiting.
+          An evening of quiet luxury.
         </motion.h2>
         <motion.p variants={fadeUpItem} className="text-ivory-dim text-base sm:text-lg mb-8 sm:mb-10 max-w-md mx-auto">
-          Experience the art of dining at NOIR & SAGE. Reserve your evening with us.
+          Experience the art of contemporary dining at NOIR & SAGE. We welcome your inquiries and visits.
         </motion.p>
         
         <motion.div variants={fadeUpItem} className="w-full sm:w-auto">
-          <Button href="/reservations" variant="primary" className="w-full sm:w-auto">
-            Make a Reservation
+          <Button href="/contact" variant="primary" className="w-full sm:w-auto">
+            Contact Us
           </Button>
         </motion.div>
       </motion.div>

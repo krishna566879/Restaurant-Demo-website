@@ -45,11 +45,8 @@ export default function Hero() {
           Seasonal ingredients, thoughtful technique, and an atmosphere designed for lingering.
         </motion.p>
         
-        <motion.div variants={fadeUpItem} className="flex flex-col sm:flex-row gap-4 mb-10 sm:mb-12 w-full sm:w-auto justify-center">
-          <Button href="/reservations" variant="primary" className="w-full sm:w-auto">
-            Reserve a Table
-          </Button>
-          <Button href="/menu" variant="secondary" className="w-full sm:w-auto">
+        <motion.div variants={fadeUpItem} className="mb-10 sm:mb-12 w-full sm:w-auto flex justify-center">
+          <Button href="/menu" variant="primary" className="w-full sm:w-auto">
             Explore the Menu
           </Button>
         </motion.div>

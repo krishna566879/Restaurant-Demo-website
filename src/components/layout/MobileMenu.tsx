@@ -104,22 +104,11 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                 </motion.div>
               );
             })}
-            <motion.div variants={menuItemVariants}>
-              <Link
-                to="/signin"
-                onTouchStart={() => prefetchRoute('/signin')}
-                onMouseEnter={() => prefetchRoute('/signin')}
-                onClick={onClose}
-                className="inline-block font-serif text-2xl sm:text-3xl text-ivory hover:text-champagne hover:-translate-y-0.5 active:scale-95 transition-[color,transform] duration-180 ease-luxury"
-              >
-                Sign In
-              </Link>
-            </motion.div>
           </motion.nav>
 
           <div className="p-6 sm:p-8 flex flex-col items-center gap-6 sm:gap-8 border-t border-noir-700 shrink-0">
-            <Button variant="primary" size="md" href="/reservations" onClick={onClose} className="w-full max-w-sm">
-              Reserve a Table
+            <Button variant="primary" size="md" href="/contact" onClick={onClose} className="w-full max-w-sm">
+              Contact Us
             </Button>
             <SocialLinks />
           </div>

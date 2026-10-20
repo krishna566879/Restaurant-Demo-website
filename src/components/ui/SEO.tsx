@@ -54,7 +54,7 @@ export const baseRestaurantJsonLd = {
   },
   telephone: restaurantData.phone,
   email: restaurantData.email,
-  acceptsReservations: true,
+  acceptsReservations: false,
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
